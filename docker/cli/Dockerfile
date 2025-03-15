@@ -1,4 +1,4 @@
-FROM php:8.4-cli AS base
+FROM php:8.4-cli@sha256:42c541dc5c5847883b54ac3bcaac74713431506db8ebcead3a445004a68d1836 AS base
 
 COPY --from=composer:2.8.5 /usr/bin/composer /usr/bin/composer
 ADD --chmod=0755 https://github.com/mlocati/docker-php-extension-installer/releases/download/2.7.14/install-php-extensions /usr/local/bin/
